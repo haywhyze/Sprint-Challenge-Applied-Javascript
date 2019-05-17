@@ -15,12 +15,14 @@ class Carousel {
     this.currentIndex < 1 ? this.currentIndex = 3 : this.currentIndex--
     this.images.forEach(image => image.style.display = 'none');
     this.images[this.currentIndex].style.display = 'block';
+    TweenMax.from(this.images[this.currentIndex], 1, {x: 1500})
   }
 
   slideRight = () => {
     this.currentIndex > 2 ? this.currentIndex = 0 : this.currentIndex++
     this.images.forEach(image => image.style.display = 'none');
     this.images[this.currentIndex].style.display = 'block';
+    TweenMax.from(this.images[this.currentIndex], 1, {x: -1500})
   }
 }
 
